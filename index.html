@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Bunkers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-500 w-full px-8 py-4">
+        <div class="container mx-auto flex gap-4 items-center justify-between text-white text-lg font-semibold">
+          <i class="fa-solid fa-house hover:text-purple-200 cursor-pointer home-button"></i>
+          <div>
+            <p class="hover:text-gray-300 cursor-pointer">Profile</p>
+          </div>
+        </div>
+    </nav>
+    <div class="animate-floatIn  flex flex-col gap-3 justify-center items-center min-h-screen bg-gray-100">
+        <div class="text-center">
+          <h1 class="text-5xl font-bold">
+            Public Bunkers <span class="text-blue-500">Norway</span>
+          </h1>
+        </div>
+        <h2 class="text-3xl font-semibold border-b-4 border-blue-500">Be safe</h2>
+        <div class="flex gap-2 mt-5">
+            <button id="find-bunker" class="bg-blue-500 text-white font-semibold rounded-lg shadow-md px-2 py-1 w-32 cursor-pointer hover:text-purple-200">Find Bunker</button>
+            <button class="bg-blue-500 text-white font-semibold rounded-lg shadow-md px-2 py-1 w-32 hover:text-purple-200"><i class="fa-solid fa-magnifying-glass mr-1"></i>Search</button>
+        </div>
+        
+      </div>
+      
+    
+    
+
+
+ 
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script src="main.js"></script>
+</body>
+
+</html>

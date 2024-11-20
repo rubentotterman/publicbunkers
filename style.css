@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes floatIn {
+    0% {
+      transform: translateY(100px); /* Start 100px below */
+      opacity: 0; /* Start invisible */
+    }
+    100% {
+      transform: translateY(0); /* End at normal position */
+      opacity: 1; /* End visible */
+    }
+  }
+  
+  .animate-floatIn {
+    animation: floatIn 1s ease-out; /* Apply the animation */
+  }
+  
+  #map { height: 90vh; }
+  #search-box {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+  }

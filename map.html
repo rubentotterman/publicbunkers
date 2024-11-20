@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Bunker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body class="bg-white min-h-screen">
+    <nav class="bg-blue-500 w-full px-8 py-4">
+        <div class="container mx-auto flex gap-4 items-center justify-between text-white text-lg font-semibold">
+          <i class="home-button fa-solid fa-house hover:text-purple-200 cursor-pointer"></i>
+          <div>
+            <p class="hover:text-gray-300 cursor-pointer">Profile</p>
+          </div>
+        </div>
+    </nav>
+    <div class="flex justify-center items-center m-5 w-1/2">
+        <input type="text" id="search-box" placeholder="Search for a bunker or city..." class="drop-shadow-lg border border-blue-500" />
+    </div>
+    <div id="map"></div>
+    <script src="main.js"></script>
+</body>
+</html>
