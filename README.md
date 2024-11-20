@@ -1,19 +1,19 @@
 <h1>Public Bunkers Norway</h1>
-<hr>
+
 <p>Application that displays public bombshelters located around in Norway. <br>
   Each shelter contains data about municipality, address and capacity.</p>
 
 <h2>Includes</h2>
-<hr>
+
 <ul>
   <li>Find your closest bunker</li>
 <li>Search for specific location</li>
 <li>See all available bunkers</li>
 </ul>
 
-<hr>
+
 <h2>Screenshots</h2>
-<hr>
+
 
 ![image](https://github.com/user-attachments/assets/52afaf1d-46ef-486c-a584-6fff8fa14979)
 ![image](https://github.com/user-attachments/assets/fe746407-60d0-4075-85cf-a66eb14f7fbc)
