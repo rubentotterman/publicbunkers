@@ -105,12 +105,17 @@ function initializeMap() {
                         `);
                     marker.addTo(map);
 
-                    // Store marker
-                    allMarkers.push(marker);
+                    // Store marker with associated data
+                    allMarkers.push({
+                        marker,
+                        kommune: properties.kommune.toLowerCase(), // For search filtering
+                        coordinates: [lat, lon],
+                        properties,
+                    });
                 }
             });
 
-            // Highlight closest bunker
+            // Highlight closest bunker if location is provided
             if (closestBunker) {
                 map.setView([closestBunker.lat, closestBunker.lon], 14); // Center map on closest bunker
                 L.marker([closestBunker.lat, closestBunker.lon])
@@ -124,6 +129,9 @@ function initializeMap() {
                     `)
                     .openPopup();
             }
+
+            // Attach search functionality
+            addSearchFunctionality(allMarkers, map);
         })
         .catch(error => {
             console.error('Error fetching bunker data:', error);
@@ -143,4 +151,29 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
     return R * c; // Distance in km
+}
+
+// Function to attach search functionality
+function addSearchFunctionality(allMarkers, map) {
+    const searchInput = document.getElementById('search-box');
+
+    if (!searchInput) return; // Exit if search box is not found
+
+    // Listen for input changes
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+
+        // Filter and update markers based on search query
+        allMarkers.forEach(({ marker, kommune }) => {
+            if (kommune.includes(query)) {
+                if (!map.hasLayer(marker)) {
+                    marker.addTo(map); // Show marker
+                }
+            } else {
+                if (map.hasLayer(marker)) {
+                    map.removeLayer(marker); // Hide marker
+                }
+            }
+        });
+    });
 }
